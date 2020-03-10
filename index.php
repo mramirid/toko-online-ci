@@ -36,6 +36,12 @@
  * @filesource
  */
 
+/**
+ * Set timezone Jakarta
+ */
+date_default_timezone_set("Asia/Jakarta");
+
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
