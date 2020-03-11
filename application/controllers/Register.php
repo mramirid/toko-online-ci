@@ -42,7 +42,7 @@ class Register extends MY_Controller
             redirect(base_url());
         } else {
             $this->session->set_flashdata('error', 'Oops terjadi suatu kesalahan');
-            redirect(base_url('/register'));
+            redirect(base_url('register'));
         }
     }
 }

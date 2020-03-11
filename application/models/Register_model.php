@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Register_model extends MY_Model
 {
-    protected $table = 'user';
+    protected $table = 'user';  // Tabel ditentukan manual karena nama class model bukan nama tabel
 
     /**
      * Untuk mendapatkan default values saat form register diload

@@ -1,6 +1,10 @@
 <main role="main" class="container">
 
-    <?php $this->load->view('layouts/_alert') ?>
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <?php $this->load->view('layouts/_alert') ?>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-8 mx-auto">
