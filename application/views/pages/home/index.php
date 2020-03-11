@@ -1,7 +1,7 @@
 <main role="main" class="container">
 
 	<?php $this->load->view('layouts/_alert') ?>
-	
+
 	<div class="row">
 		<div class="col-md-9">
 			<div class="row">
@@ -10,8 +10,7 @@
 						<div class="card-body">
 							Kategori: <strong>Semua kategori</strong>
 							<span class="float-right">
-								Urutkan harga: <a href="#" class="badge badge-primary">Termurah</a> | <a href="#"
-									class="badge badge-primary">Termurah</a>
+								Urutkan harga: <a href="#" class="badge badge-primary">Termurah</a> | <a href="#" class="badge badge-primary">Termurah</a>
 							</span>
 						</div>
 					</div>
