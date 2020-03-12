@@ -10,12 +10,12 @@ class MY_Model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        
+
         if (!$this->table) {    // Jika nilai table kosong 
             $this->table = strtolower(
                 // ubah jadi huruf kecil dan hapus suffix '_model'
                 // param 3 mengarahkan ke model yang digunakan
-                str_replace('_model', '', get_class($this)) 
+                str_replace('_model', '', get_class($this))
             );
         }
     }
@@ -27,15 +27,16 @@ class MY_Model extends CI_Model
 
         // Pesan error
         $this->form_validation->set_error_delimiters(
-            '<small class="form-text text-danger">', '</small>'
+            '<small class="form-text text-danger">',
+            '</small>'
         );
 
         // Panggil rules
         // getValidationRules() diletakkan di file-file model turunan nanti karena tiap model punya validationnya sendiri
         $validationRules = $this->getValidationRules();
-        
+
         $this->form_validation->set_rules($validationRules);    // Set rules dari model2 nanti
-        
+
         return $this->form_validation->run();  // Jalankan validasi
     }
 
@@ -123,6 +124,7 @@ class MY_Model extends CI_Model
             $this->perPage,                     // Limit data yang dimunculkam
             $this->calculateRealOffset($page)   // Mulai dari
         );
+        return $this;
     }
 
     public function calculateRealOffset($page)
@@ -139,7 +141,7 @@ class MY_Model extends CI_Model
     public function makePagination($baseUrl, $uriSegment, $totalRows = null)
     {
         $this->load->library('pagination');
-        
+
         $config = [
             'base_url'          => $baseUrl,
             'uri_segment'       => $uriSegment,
@@ -168,9 +170,9 @@ class MY_Model extends CI_Model
             'num_tag_open'      => '<li class="page-item">',
             'num_tag_close'     => '</li>'
         ];
-        
+
         $this->pagination->initialize($config);
-        
+
         return $this->pagination->create_links();     // Generate pagination
     }
 }

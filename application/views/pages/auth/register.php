@@ -16,6 +16,7 @@
                     <?= form_open('register', ['method' => 'POST']) ?>
                         <div class="form-group">
                             <label for="">Nama</label>
+                            <!-- Param 1: name, 2: default values, 3: atribut -->
                             <?= form_input('name', $input->name, ['class' => 'form-control', 'required' => true, 'autofocus' => true]) ?>
                             <?= form_error('name') ?>
                         </div>
