@@ -44,6 +44,7 @@ class MY_Model extends CI_Model
 
     public function select($columns)
     {
+        // Param columns beripe array
         $this->db->select($columns);
         return $this;
     }
