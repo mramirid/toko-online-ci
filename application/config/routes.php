@@ -57,3 +57,7 @@ $route['translate_uri_dashes'] = FALSE;
 // Maksudnya jika menggunakan 'category/index/$num'
 // maka pada url akan digantikan ke 'category/$num' (url friendly 👌)
 $route['category/(:num)'] = 'category/index/$1';
+
+$route['product/(:num)'] = 'product/index/$1';
+
+$route['user/(:num)'] = 'user/index/$1';
