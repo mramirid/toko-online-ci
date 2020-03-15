@@ -127,7 +127,7 @@ class Product extends MY_Controller
                 // Jika upload berhasil, pasang nama file yang diupload ke dalam database
                 $data['input']->image   = $upload['file_name'];
             } else {
-                redirect(base_url('product/create'));
+                redirect(base_url("product/edit/$id"));
             }
         }
 
