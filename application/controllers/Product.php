@@ -20,11 +20,11 @@ class Product extends MY_Controller
     {
         $data['title']      = 'Admin: Produk';
         $data['content']    = $this->product->select(
-            [
-                'product.id', 'product.title AS product_title', 'product.image', 'product.price', 'product.is_available',
-                'category.title AS category_title'
-            ]
-        )
+                [
+                    'product.id', 'product.title AS product_title', 'product.image', 'product.price', 'product.is_available',
+                    'category.title AS category_title'
+                ]
+            )
             ->join('category')     // Query untuk mencari suatu data produk beserta kategorinya
             ->paginate($page)
             ->get();
@@ -47,11 +47,11 @@ class Product extends MY_Controller
 
         $data['title']      = 'Admin: Produk';
         $data['content']    = $this->product->select(
-            [
-                'product.id', 'product.title AS product_title', 'product.image', 'product.price', 'product.is_available',
-                'category.title AS category_title'
-            ]
-        )
+                [
+                    'product.id', 'product.title AS product_title', 'product.image', 'product.price', 'product.is_available',
+                    'category.title AS category_title'
+                ]
+            )
             ->join('category')
             ->like('product.title', $keyword)
             ->orLike('description', $keyword)   // Tidak hanya mencari di title melainkan di desc juga
