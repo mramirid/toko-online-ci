@@ -60,7 +60,7 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    <a href="/checkout.html" class="btn btn-success float-right">Pembayaran <i class="fas fa-angle-right"></i></a>
+                    <a href="<?= base_url('checkout') ?>" class="btn btn-success float-right">Pembayaran <i class="fas fa-angle-right"></i></a>
                     <a href="<?= base_url('home') ?>" class="btn btn-warning text-white"><i class="fas fa-angle-left"></i> Kembali belanja</a>
                 </div>
             </div>
