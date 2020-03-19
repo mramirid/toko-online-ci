@@ -27,8 +27,7 @@
                             <?php foreach ($content as $row) : ?>
                                 <tr>
                                     <td>
-                                        <p><img src="<?= $row->image ? base_url("images/product/$row->image") : base_url('images/product/default.png') ?>" alt="" height="50"> <strong><?= $row->title ?></strong>
-                                        </p>
+                                        <p><img src="<?= $row->image ? base_url("images/product/$row->image") : base_url('images/product/default.png') ?>" alt="" height="50"> <strong><?= $row->title ?></strong></p>
                                     </td>
                                     <td class="text-center">Rp.<?= number_format($row->price, 0, ',', '.') ?>,-</td>
                                     <td>

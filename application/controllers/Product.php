@@ -99,7 +99,7 @@ class Product extends MY_Controller
             return;
         }
 
-        if ($this->product->create($input)) {   // Input data
+        if ($this->product->create($input)) {   // Jika insert berhasil
             $this->session->set_flashdata('success', 'Data berhasil disimpan');
         } else {
             $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan');
