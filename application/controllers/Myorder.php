@@ -52,7 +52,7 @@ class Myorder extends MY_Controller
 
         if ($data['order']->status !== 'waiting') {     // Jika status sudah tidak waiting (sudah konfirmasi)
             // Ambil order yang sudah dikonfirmasi dari tabel orders_confirm
-            // Informasi ini untuk ditampilkan di footer
+            // Informasi ini untuk ditampilkan di footer & menghilangkan tombol mencegah user confirm 2x
             $this->myorder->table   = 'orders_confirm';
             $data['order_confirm']  = $this->myorder->where('id_orders', $data['order']->id)->first();
         }
