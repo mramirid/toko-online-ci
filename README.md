@@ -1,4 +1,4 @@
-# Toko-Online v1.0
+# Toko Online CI v1.0
 
 Aplikasi toko online berbasis web menggunakan framework CodeIgniter 3
 
